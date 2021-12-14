@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="/static/scss/style.css" />
+
+
+
+    {% endblock %}
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <header class="header">
+                <div class="container">
+
+                    <div class="header_column_one">
+                        <a href="{{ url_for('home') }}"><img class="logo" src="/templates/img/Buxus_logo.svg" alt="logo"></a>
+                    </div>
+
+                    <div class="header_column_two">
+                        <p>8(391) 296-05-46</p>
+                    </div>
+
+                    <div class="header_button">
+
+
+                        <button>Оставить заявку</button>
+
+
+
+
+
+                    </div>
+
+                    <div class="header_column_three">
+                        <div class="header_burger">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <nav class="header_menu">
+                        <ul class="header_list">
+                            <li class="header_link"><a href="{{ url_for('about') }}">О нас</a></li>
+                            <li class="header_link"><a href="{{ url_for('price') }}">Цены</a></li>
+                            <li class="header_link"><a href="{{ url_for('portfolio') }}">Портфолио</a></li>
+                            <li class="header_link"><a href="{{ url_for('contact') }}">Контакты</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </header>
+
+            <div class="body-content">
+                {% block content %}{% endblock %}
+                <hr />
+            </div>
+
+            <div class="index_page">
+                {% block page %}{% endblock %}
+                <hr />
+            </div>
+
+        </div>
+
+
+        <!--<form role="form" method='POST' action='/'>
+              <div class="form-group">
+                  <input type="text" name="url" class="form-control" id="url-box" placeholder="Enter URL..." style="max-width: 300px;" autofocus required>
+              
+            </div>
+              <button type="submit" class="btn btn-default">Отправить</button>
+            </form>-->
+
+
+        <footer class="footer">
+            <div class="now_year">
+                <p>&copy; {{ year }} - Buxus</p>
+            </div>
+            <div class="author">
+                <p>По вопросам размещения сайта обращаться:</p>
+                <p>infografika@inbox.ru</p>
+            </div>
+        </footer>
+    </div>
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../static/scripts/Script.js"></script>
+    <!--
+    {% block scripts %}{% endblock %}
+     -->
+</body>
+</html>
