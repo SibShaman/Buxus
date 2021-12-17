@@ -1,8 +1,6 @@
 from flask import Flask
 from datetime import datetime
 from flask import render_template
-from jinja2 import Template
-from os import environ
 
 app = Flask(__name__)
 
