@@ -1,5 +1,11 @@
-.header{
+@font-face {
+    font-family: "Century Gothic";
+    src: url(/static/fonts/CenturyGothic.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
 
+.header{
     display: flex;
     background-color: rgba(207, 207, 207, 0.6);
     position: absolute;
@@ -14,8 +20,8 @@
     flex-direction: row;
     width: 100%;
     align-items: center;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
 
     .header_column_one{
        width: 40%;
@@ -25,16 +31,100 @@
        }
     }
     .header_column_two{
+      font-family: "Century Gothic", sans-serif;
+      font-size: 21px;
+      width: 70%;
+      text-align: right;
 
+   }
+    .header_button {
+      display: block;
+      position: relative;
+      width: 20%;
+      left: 20px;
+      right: 20px;
+      text-align: center;
+
+      button {
+        font-family: "Century Gothic", sans-serif;
+        font-size: 21px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.761);
+        border-radius: 15px;
+        padding: 8px 25px;
+        border-width: 0;
+        cursor: pointer;
+        transition: all 0.5s ease 0s;
+      }
+      button:hover {
+        background-color: rgba(0, 0, 0, 0.661);
+        transition: all 0.5s ease 0s;
+      }
     }
-    .header_column_three{
+    .header_column_three {
+      text-align: right;
 
-        .header_burger{
+      .header_burger {
+        display: block;
+        position: relative;
+        width: 60px;
+        height: 60px;
+
+        span {
+          position: absolute;
+          background-color: black;
+          left: 0;
+          width: 80%;
+          height: 4px;
+          top: 28px;
+          transition: all 0.3s ease 0s;
+        }
+
+        ::after, ::before {
+          content: '';
+          background-color: black;
+          position: absolute;
+          width: 100%;
+          height: 4px;
+          left: 0;
+          transition: all 0.3s ease 0s;
+        }
+
+        ::after {
+          bottom: 15px;
+        }
+
+        ::before {
+          top: 15px;
+        }
+
+        :hover {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+          transition: 2s;
+        }
+
+        .active:before {
+          transform: rotate(45deg);
+          top: 18px;
+        }
+
+        .active:after {
+          transform: rotate(-45deg);
+          bottom: 18px;
+        }
+
+        .active span {
+          transform: scale(0);
 
         }
+      }
     }
     .header_menu{
+        display: none;
+      }
 
-    }
-  }
+
+}
 }
