@@ -103,7 +103,7 @@
           -ms-transform: scale(1.1);
           transform: scale(1.1);
           transition: 2s;
-        }
+
 
         .active:before {
           transform: rotate(45deg);
@@ -119,6 +119,8 @@
           transform: scale(0);
 
         }
+        }
+
       }
     }
     .header_menu{
