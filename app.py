@@ -10,7 +10,7 @@ app = Flask(__name__)
 def home():
     """Renders the home page."""
     return render_template(
-        'html/index.html',
+        'index.html',
         title='Buxus',
         year=datetime.now().year,
     )
@@ -20,7 +20,7 @@ def home():
 def about():
     """Renders the about page."""
     return render_template(
-        'html/about.html',
+        'about.html',
         title='О нас',
         year=datetime.now().year,
         message='Your application description page.'
@@ -31,7 +31,7 @@ def about():
 def price():
     """Renders the about page."""
     return render_template(
-        'html/price.html',
+        'price.html',
         title='Цены',
         year=datetime.now().year,
         message='Your application description page.'
@@ -42,7 +42,7 @@ def price():
 def portfolio():
     """Renders the about page."""
     return render_template(
-        'html/portfolio.html',
+        'portfolio.html',
         title='Портфолио',
         year=datetime.now().year,
         message='Your application description page.'
@@ -53,7 +53,7 @@ def portfolio():
 def contact():
     """Renders the contact page."""
     return render_template(
-        'html/contact.html',
+        'contact.html',
         title='Контакты',
         year=datetime.now().year,
         message='Your contact page.'
