@@ -10,19 +10,19 @@
     z-index: 3;
 
   .container{
+    display: flex;
     flex-direction: row;
     width: 100%;
-    margin: auto;
-    display: flex;
     align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
 
     .header_column_one{
-       margin-left: 5%;
        width: 40%;
-        .logo{
+       .logo{
             height: 70px;
             width: auto;
-        }
+       }
     }
     .header_column_two{
 
